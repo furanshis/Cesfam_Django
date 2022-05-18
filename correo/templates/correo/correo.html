@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC|Contactanos</title>
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+
+<body>
+    <div class="container">
+
+    <form action="" method="POST" class="contact-form">
+        {% csrf_token %}
+        <div class="form-control">
+            <div class="tag">Nombre completo</div>
+            <input type="text" name="full-name">
+        </div>
+        <div class="form-control">
+            <div class="tag">Correo</div>
+            <input type="text" name="email">
+        </div>
+        <div class="form-control">
+            <div class="tag">Telefono</div>
+            <input type="text" name="telefono">
+        </div>
+        <div class="form-control">
+            <div class="tag">asunto</div>
+            <input type="text" name="subject">
+        </div>
+        <div class="from-control">
+            <div class="tag">Mensaje</div>
+            <textarea name="message" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-control">
+            <a href="#"> <input type="Submit" class="btn-submit-btn" value="ENVIAR" ></a>
+        </div>    
+    </form>    
+</div>
+
+
+    
+</body>
+</html>

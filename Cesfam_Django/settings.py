@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STRIPE_SECRET_KEY = 'sk_test_51Kze1cEGaM7Rr8BpWW6CUSzyZO51W2rTxTDZ1XjNwEc65BmlV3H02tDlWqabxRe8RuO22i3IVH5HSki4DLjRxfAO00zGRegTKY'
+
 
 # Application definition
 
@@ -47,11 +49,14 @@ INSTALLED_APPS = [
 
     #nuestras apps
     'remedios',
+    'orden',
+    'correo',
 ]
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,3 +145,11 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER= 'cesfamdjango2022@gmail.com'
+EMAIL_HOST_PASSWORD = 'Cesfam1234'
+EMAIL_PORT = 587
+EMAIL_USE_TLS= True
+EMAIL_USE_SSL = False
