@@ -1,0 +1,57 @@
+	virtualenv environment_3_8_2 -->crear el ambiente virtual
+	source environment_3_8_2/bin/activate --> para activar el ambiente
+
+	pip3 install Django-rest-framework --> Rest para la comunicacion con la base de datos
+
+	pip install Django-cors-headers --> Esto es para que nos ayude con la seguridad para que todo vaya bien entre la api y 
+	el backend∫
+
+	pip install djoser --> esto nos ayuda para las autenticaciones de usuario para que sea más facil crear usuarios, 
+	logearse y obtener tokens para la autenticaciones
+
+	pip install pillow --> Esto nos ayuda con el tema del redimensionamiento (resize) de las imagenes
+
+	pip install stripe --> 
+
+	pip install django-bootstrap-v5 --> esto es para el diseño de la página
+
+
+
+
+Vue.js framework
+
+	npm install -g @vue/cli
+	vue create project_vue --> esto es para crear el projecto en vue
+	luego para instalar paquetes debemos ir al directorio del proyecto vue y poner el comando -> npm install paquete 
+
+	Para ehcar a andar la página solo debemos posicionarnos en el directorio del framework y poner el siguiente 
+	comando - npm run serve - y listo.
+	Para que la información traida por el backend se muestre debemos, obviamente, echar a andar 
+	el backend - python manage.py runserver - y listo.
+
+	npm install axios --> esto nos va a ayudar a 'hablar' con el backend
+	npm install bulma-toasted --> nos permite mostrat pop-ups (mensajes que saltan) en la pagina cuando una accion es realizada
+
+
+Base de datos
+
+	slug = los slugs son las partes finales de una URL que identifican las páginas dentro de un sitio web. los modelos deben 
+	tener un slug para poder identificarlos en el propio sitio web
+
+Serializers
+
+	Los Serializers son los archivos que contienene la información de la base de datos pero convertida en JSON para poder 
+	utilizarla en el frontend.
+
+Mercado pago API:
+
+	Credenciales:
+		las credenciales son las claves que proporciona la API que nos permiten configurar la integraación de la misma. hay dos 
+		tipos de claves; las públicas y las privadas.
+
+		Claves públicas (Public Key): son las llaves que nos permiten acceder a los recursos que necesita el frontend. con ella podemos 
+		recolectar los datos de las tarjetas y convertirlas en un Token representativo que podemos enviar de forma segura a 
+		nuestros servidores y generar el pago.
+
+		Claves Privadas (Access Token): con esta clave podemos llamar a las demás APIs que existen desde el servidor,
+		Por ejemplo: para procesar un pago, un desembolso o almacenar tarjetas.
